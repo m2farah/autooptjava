@@ -7,17 +7,21 @@ import java.io.*;
 import java.util.LinkedList;
 
 class MyClass {
-    public MyClass(java.lang.String s, int i) {
+    public MyClass(String s, int i) {
     	LinkedList<String> testArrayList = new LinkedList<String>();
     }
 
     public MyClass() {
         super();
     }
+    
+    class ClassA{
+    	String s;
+    }
 
-    public static void main(java.lang.String[] args) {
+    public static void main(String[] args) {
         MyClass my = new MyClass();
-        java.lang.System.out.println("BismiLLAH");
+        System.out.println("Test Spoon - MyClass");
     }
 }
 

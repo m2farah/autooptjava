@@ -475,7 +475,7 @@
 			  <version>2.4.1</version>
 			  <configuration>
 			  	<processors>
-			    	<processor>fr.pji.autooptjava.spoonProcessors.CatchProcessor</processor>
+			    	<processor>fr.pji.autooptjava.spoonProcessors.test.CatchProcessor</processor>
 			    </processors>
 			  </configuration>
 			  <executions>

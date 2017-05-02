@@ -10,11 +10,14 @@ public class TestCl extends MyClass{
 	public TestCl(){
 		testArrayList = new LinkedList<String>();
 	}
+	
 	public static void main(String[] args) {
 		try{
 		MyClass my = new MyClass();
 		TestCl tc = new TestCl();
-		tc.testArrayList.add("BismiLLAH");
+		CollClass cc = new CollClass();
+		String testStringClass = new String("Test Spoon - TestCl");
+		tc.testArrayList.add(testStringClass);
 		for(int i=0; i<tc.testArrayList.size(); i++)
 			System.out.println(tc.testArrayList.get(i));
 		}catch (Exception e1) {

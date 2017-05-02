@@ -1,4 +1,6 @@
-package fr.pji.autooptjava.spoonProcessors;
+package fr.pji.autooptjava.spoonProcessors.test;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.log4j.Level;
 import spoon.processing.AbstractProcessor;
@@ -11,6 +13,7 @@ import spoon.reflect.code.CtCodeSnippetStatement;
  */
 
 public class CatchProcessor extends AbstractProcessor<CtCatch> {
+	private static AtomicInteger countClass = new AtomicInteger(0);
     public void process(CtCatch element) {
         if (element.getBody().getStatements().size() == 0) {
             getFactory().getEnvironment().report(this, Level.WARN, element, "empty catch clause");
@@ -18,8 +21,10 @@ public class CatchProcessor extends AbstractProcessor<CtCatch> {
         	comment.setContent("empty catch clause");
         	element.getBody().insertBegin(comment);
         	CtCodeSnippetStatement snippet = getFactory().Core().createCodeSnippetStatement();
-        	snippet.setValue("System.out.println(\"empty catch clause\")");
+        	snippet.setValue("System.out.println(\"empty catch clause !\")");
         	element.getBody().insertBegin(snippet);
+    		String mesg = "\n================= Empty Catch found : "+countClass.incrementAndGet()+"==========\n";
+    		getFactory().getEnvironment().report(this, Level.WARN, element, mesg);
         }
     }
 }
