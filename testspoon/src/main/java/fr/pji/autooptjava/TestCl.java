@@ -1,14 +1,16 @@
 package fr.pji.autooptjava;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
-
-import fr.pji.autooptjava.MyClass;
 
 public class TestCl extends MyClass{
 	public LinkedList<String> testArrayList;
+	HashSet<Integer> hs = new HashSet<Integer>();
 	public TestCl(){
 		testArrayList = new LinkedList<String>();
+		ArrayList<Integer> arrList = new ArrayList<Integer>();
 	}
 	
 	public static void main(String[] args) {

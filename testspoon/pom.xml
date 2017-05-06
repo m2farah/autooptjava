@@ -31,9 +31,10 @@
 			  <version>2.4.1</version>
 			  <configuration>
 			  	<processors>
-			    	<processor>fr.pji.autooptjava.spoonProcessors.test.CatchProcessor</processor>
-			    	<processor>fr.pji.autooptjava.spoonProcessors.test.StringClass</processor>
-			    	<processor>fr.pji.autooptjava.spoonProcessors.test.CollectionProcessor</processor>
+<!-- 			    	<processor>fr.pji.autooptjava.spoonProcessors.test.CatchProcessor</processor>
+			    	<processor>fr.pji.autooptjava.spoonProcessors.test.StringClass</processor> -->
+			    	<processor>fr.pji.autooptjava.spoonProcessors.test.ListCollectionProcessor</processor>
+			    	<processor>fr.pji.autooptjava.spoonProcessors.test.ArrayListToLinkedList</processor>
 			    </processors>
 			  </configuration>
 			  <executions>

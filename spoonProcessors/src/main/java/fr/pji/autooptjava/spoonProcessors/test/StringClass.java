@@ -16,9 +16,10 @@ public class StringClass extends AbstractProcessor<CtConstructorCallImpl<String>
 	public void process(CtConstructorCallImpl<String> element) {
 //		List<String> list= element.getElements(new TypeFilter(element.get));
 //		String mesg = "\n================= String Class found : "+countClass.addAndGet(list.size())+"==========\n";
-//		if (element.getType() == )
-		String mesg = "\n================= String Class found : "+countClass.incrementAndGet()+"==========\n";
-		getFactory().getEnvironment().report(this, Level.WARN, element, mesg);
+		if (element.getType().getSimpleName().equals("String")){
+			String mesg = "\n================= String Class found : "+countClass.incrementAndGet()+"==========\n";
+			getFactory().getEnvironment().report(this, Level.WARN, element, mesg);
+		}
 	}
 
 }
